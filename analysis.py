@@ -44,3 +44,16 @@ plt.xticks(rotation=45, ha='right')
 plt.savefig('team_wins.png')
 plt.show()
 print("Chart 1 saved!")
+
+plt.figure(figsize=(10,5))
+toss_counts = df['TossDecision'].value_counts()
+plt.pie(toss_counts.values, 
+        labels=toss_counts.index, 
+        autopct='%1.1f%%', 
+        colors=['#ff9999','#66b3ff'],
+        startangle=90)
+plt.title('Toss Decision - Bat vs Field', fontsize=14, fontweight='bold')
+plt.tight_layout()
+plt.savefig('toss_decision.png')
+plt.show()
+print("Chart 2 saved!")
