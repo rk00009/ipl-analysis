@@ -33,14 +33,14 @@ print(df.isnull().sum())
 
 # print(df["Player_of_Match"].value_counts().head(10))
 
-plt.figure(figsize=(10,5))
+plt.figure(figsize=(15,10))
 top_teams = df['WinningTeam'].value_counts().head(8)
 sns.barplot(x=top_teams.index, y=top_teams.values)
 plt.title('IPL - Most Wins by Team', fontsize=14, fontweight='bold')
 plt.xlabel('Team')
 plt.ylabel('Number of Wins')
 plt.tight_layout()
-plt.xticks(rotation=45, ha='right')
+
 plt.savefig('team_wins.png')
 plt.show()
 print("Chart 1 saved!")
